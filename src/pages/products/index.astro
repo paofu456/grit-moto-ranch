@@ -1,0 +1,45 @@
+---
+import ProductCard from "../../components/product/ProductCard.astro";
+import ContactCta from "../../components/sections/ContactCta.astro";
+import Container from "../../components/ui/Container.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getPublishedProducts } from "../../lib/products";
+import { makePageTitle } from "../../lib/seo";
+
+const products = await getPublishedProducts();
+---
+
+<BaseLayout
+  title={makePageTitle("产品")}
+  description="摩托车手机支架产品列表：型号、适配尺寸与材质等参数，欢迎咨询报价。"
+>
+  <section class="border-b border-[var(--color-line)] bg-white py-20 sm:py-28">
+    <Container>
+      <p class="eyebrow mb-5">产品</p>
+      <h1 class="max-w-5xl text-4xl font-black leading-[1.08] sm:text-6xl">摩托车手机支架</h1>
+      <p class="mt-7 max-w-3xl text-xl leading-9 text-[var(--color-muted)]">
+        每款产品一个独立页面，列出型号、适配尺寸、材质与夹持方式等参数。
+      </p>
+    </Container>
+  </section>
+
+  <section class="py-24 sm:py-32">
+    <Container>
+      {products.length > 0 ? (
+        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {products.map((product) => <ProductCard product={product} />)}
+        </div>
+      ) : (
+        <div class="border border-dashed border-[var(--color-line)] bg-white p-8 sm:p-12">
+          <p class="text-xs font-bold tracking-[0.2em] text-[var(--color-accent)]">待补充</p>
+          <h2 class="mt-4 text-2xl font-black text-[var(--color-ink)]">产品资料尚未提供。</h2>
+          <p class="mt-5 max-w-2xl text-base leading-8 text-[var(--color-muted)]">
+            请提供款式名称、规格参数与可公开使用的产品图片，我们会按真实资料建立产品条目，不使用演示数据。
+          </p>
+        </div>
+      )}
+    </Container>
+  </section>
+
+  <ContactCta />
+</BaseLayout>

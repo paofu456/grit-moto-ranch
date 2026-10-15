@@ -1,0 +1,65 @@
+---
+import Container from "../components/ui/Container.astro";
+import company from "../data/company.json";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { makePageTitle } from "../lib/seo";
+
+const phoneHref = company.phone.replace(/\s/g, "");
+const whatsapp = company.whatsapp.replace(/[^\d]/g, "");
+---
+
+<BaseLayout
+  title={makePageTitle("联系我们")}
+  description={`通过邮箱与电话联系${company.name}，咨询产品与报价。`}
+>
+  <section class="relative overflow-hidden bg-[var(--color-ink)] py-20 text-white sm:py-28">
+    <div class="absolute inset-0 opacity-20" aria-hidden="true" style="background-image: radial-gradient(circle at 85% 30%, var(--color-accent) 0, transparent 32%);"></div>
+    <Container class="relative">
+      <p class="mb-5 text-xs font-extrabold tracking-[0.24em] text-[var(--color-accent)]">联系我们</p>
+      <h1 class="max-w-4xl text-4xl font-black leading-[1.08] sm:text-6xl">直接联系，快速拿到型号与报价。</h1>
+      <p class="mt-7 max-w-2xl text-xl leading-9 text-white/65">把需要的款式和数量发给我们，我们会尽快回复。</p>
+    </Container>
+  </section>
+
+  <section class="py-24 sm:py-32">
+    <Container class="grid gap-6 lg:grid-cols-3">
+      {company.email && (
+        <a href={`mailto:${company.email}`} class="border border-[var(--color-line)] bg-white p-8 transition hover:-translate-y-1 hover:shadow-[var(--shadow-card)]">
+          <p class="eyebrow">邮箱</p>
+          <h2 class="mt-4 text-2xl font-black">发邮件给我们</h2>
+          <p class="mt-3 break-all text-[var(--color-muted)]">{company.email}</p>
+        </a>
+      )}
+      {company.phone && (
+        <a href={`tel:${phoneHref}`} class="border border-[var(--color-line)] bg-white p-8 transition hover:-translate-y-1 hover:shadow-[var(--shadow-card)]">
+          <p class="eyebrow">电话</p>
+          <h2 class="mt-4 text-2xl font-black">电话咨询</h2>
+          <p class="mt-3 text-[var(--color-muted)]">{company.phone}</p>
+        </a>
+      )}
+      {whatsapp && (
+        <a href={`https://wa.me/${whatsapp}`} class="border border-[var(--color-line)] bg-white p-8 transition hover:-translate-y-1 hover:shadow-[var(--shadow-card)]">
+          <p class="eyebrow">WhatsApp</p>
+          <h2 class="mt-4 text-2xl font-black">WhatsApp 联系</h2>
+          <p class="mt-3 text-[var(--color-muted)]">{company.whatsapp}</p>
+        </a>
+      )}
+    </Container>
+
+    {company.address && (
+      <Container class="mt-10">
+        <div class="bg-[var(--color-primary)] p-8 text-white sm:p-12">
+          <p class="text-xs font-extrabold tracking-[0.2em] text-[var(--color-accent)]">公司地址</p>
+          <h2 class="mt-4 text-3xl font-black">{company.location}</h2>
+          <p class="mt-3 max-w-2xl text-lg text-white/70">{company.address}</p>
+        </div>
+      </Container>
+    )}
+
+    <Container class="mt-10">
+      <p class="max-w-3xl border-l-2 border-[var(--color-line)] pl-4 text-sm leading-7 text-[var(--color-muted)]">
+        在线询盘表单尚未接通后端，因此本页只提供可真实使用的联系方式，不展示无法送达的假表单。
+      </p>
+    </Container>
+  </section>
+</BaseLayout>

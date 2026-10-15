@@ -1,0 +1,22 @@
+---
+import company from "../../data/company.json";
+import Button from "../ui/Button.astro";
+import Container from "../ui/Container.astro";
+---
+
+<section class="py-24 sm:py-32">
+  <Container>
+    <div class="relative overflow-hidden bg-[var(--color-primary)] px-6 py-14 text-white sm:px-12 lg:flex lg:items-center lg:justify-between lg:gap-12 lg:px-16 lg:py-16">
+      <div class="absolute -right-20 -top-32 h-80 w-80 rounded-full border-[60px] border-white/10" aria-hidden="true"></div>
+      <div class="relative max-w-3xl">
+        <p class="text-xs font-extrabold tracking-[0.24em] text-[var(--color-accent)]">下一步</p>
+        <h2 class="mt-4 text-3xl font-black leading-tight sm:text-4xl lg:text-5xl">把你的需求发给我们</h2>
+        <p class="mt-5 text-lg text-white/75">留下联系方式与需要的款式，我们会尽快回复型号与报价。</p>
+      </div>
+      <div class="relative mt-8 flex shrink-0 flex-col gap-3 sm:flex-row lg:mt-0 lg:flex-col">
+        <Button href={`mailto:${company.email}`} variant="light">发送邮件</Button>
+        <Button href="/contact/" variant="secondary" class="border-white/25 bg-white/10 text-white hover:border-white">联系方式</Button>
+      </div>
+    </div>
+  </Container>
+</section>

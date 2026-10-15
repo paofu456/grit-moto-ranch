@@ -1,0 +1,45 @@
+---
+import ContactCta from "../components/sections/ContactCta.astro";
+import Container from "../components/ui/Container.astro";
+import company from "../data/company.json";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { makePageTitle } from "../lib/seo";
+
+const facts = [
+  { label: "公司／品牌名称", value: company.name },
+  { label: "主营产品", value: "摩托车手机支架" },
+  { label: "所在地区", value: company.location },
+  { label: "成立时间", value: company.founded },
+].filter((item) => item.value);
+---
+
+<BaseLayout
+  title={makePageTitle("关于我们")}
+  description={`${company.name} 的基本信息与联系方式。`}
+>
+  <section class="border-b border-[var(--color-line)] bg-white py-20 sm:py-28">
+    <Container>
+      <p class="eyebrow mb-5">关于我们</p>
+      <h1 class="max-w-5xl text-4xl font-black leading-[1.08] sm:text-6xl">{company.name}</h1>
+      <p class="mt-7 max-w-3xl text-xl leading-9 text-[var(--color-muted)]">{company.description}</p>
+    </Container>
+  </section>
+
+  <section class="py-24 sm:py-32">
+    <Container>
+      <dl class="grid gap-6 sm:grid-cols-2">
+        {facts.map((fact) => (
+          <div class="border border-[var(--color-line)] bg-white p-8">
+            <dt class="text-xs font-bold tracking-[0.14em] text-[var(--color-muted)]">{fact.label}</dt>
+            <dd class="mt-3 text-lg font-black text-[var(--color-ink)]">{fact.value}</dd>
+          </div>
+        ))}
+      </dl>
+      <p class="mt-8 max-w-3xl border-l-2 border-[var(--color-line)] pl-4 text-sm leading-7 text-[var(--color-muted)]">
+        公司简介、成立时间、产地与产能等资料待你确认后补充，本页不使用未经确认的表述。
+      </p>
+    </Container>
+  </section>
+
+  <ContactCta />
+</BaseLayout>

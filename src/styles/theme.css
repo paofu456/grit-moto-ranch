@@ -1,0 +1,18 @@
+:root {
+  /* Visual foundation derived from the customer's reference (2026-10-15 study):
+     near-black ink, white surface, one saturated red accent, tight radii, heavy heading weights. */
+  --color-ink: #121212;
+  --color-muted: #575757;
+  --color-surface: #ffffff;
+  --color-card: #ffffff;
+  --color-line: #e3e3e3;
+  --color-primary: #121212;
+  --color-primary-dark: #000000;
+  --color-accent: #ef3340;
+  --color-accent-dark: #c4232e;
+  /* No webfont CDN: the site targets mainland visitors, so it uses system CJK/Latin stacks. */
+  --font-heading: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans SC", sans-serif;
+  --font-body: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Source Han Sans SC", sans-serif;
+  --shadow-card: 0 18px 44px rgba(18, 18, 18, 0.1);
+  --radius-card: 0.35rem;
+}

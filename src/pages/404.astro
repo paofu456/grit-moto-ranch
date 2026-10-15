@@ -1,0 +1,24 @@
+---
+import Button from "../components/ui/Button.astro";
+import Container from "../components/ui/Container.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { makePageTitle } from "../lib/seo";
+---
+
+<BaseLayout
+  title={makePageTitle("页面不存在")}
+  description="你访问的页面不存在或已更改，可以返回首页或查看产品。"
+  noindex={true}
+>
+  <section class="py-28 sm:py-40">
+    <Container class="text-center">
+      <p class="text-8xl font-black text-[var(--color-accent)] sm:text-9xl">404</p>
+      <h1 class="mt-6 text-4xl font-black sm:text-6xl">这个页面不存在</h1>
+      <p class="mx-auto mt-5 max-w-xl text-lg text-[var(--color-muted)]">链接可能已经更改，或该页面已被移除。</p>
+      <div class="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+        <Button href="/">返回首页</Button>
+        <Button href="/products/" variant="secondary">查看产品</Button>
+      </div>
+    </Container>
+  </section>
+</BaseLayout>
