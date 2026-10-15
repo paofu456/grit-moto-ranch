@@ -1,3 +1,10 @@
 # Change log
 
-Record material user-requested changes when this starter is used for a company project.
+## 2026-10-15
+
+- 初始化客户项目（Forge 模板，catalog commit 566d684d8c13acca1c4e2fec626a8eabdae2a604）
+- 中文配置、参考站视觉方向（深色首屏 + 红 #EF3340 强调 + 系统中文字体栈）、真实联系方式
+- 移除全部演示公司与演示产品内容
+- 解析客户报价表，建立 5 个类目 68 款产品条目与 68 张占位图
+- 新增类目网格区块、类目锚点导航、产品详情页规格参数表
+- `npm run verify` 通过（73 页）；桌面 1440px 与手机 375px 代表路由实测通过
