@@ -13,7 +13,7 @@ const galleryId = `gallery-${Math.random().toString(36).slice(2)}`;
 ---
 
 <div id={galleryId} data-gallery>
-  <div class="overflow-hidden rounded-[var(--radius-card)] bg-[#e5efec]">
+  <div class="overflow-hidden border border-[var(--color-line)] bg-[var(--color-surface)]">
     <img
       data-gallery-main
       src={images[0].src}
@@ -24,14 +24,14 @@ const galleryId = `gallery-${Math.random().toString(36).slice(2)}`;
     />
   </div>
   {images.length > 1 && (
-    <div class="mt-4 grid grid-cols-4 gap-3" aria-label="Product images">
+    <div class="mt-4 grid grid-cols-4 gap-3" aria-label="产品图片">
       {images.map((image, index) => (
         <button
           type="button"
           data-gallery-thumb
           data-src={image.src}
           data-alt={image.alt}
-          aria-label={`Show product image ${index + 1}`}
+          aria-label={`查看第 ${index + 1} 张产品图`}
           aria-pressed={index === 0 ? "true" : "false"}
           class="overflow-hidden rounded-xl border-2 border-transparent aria-pressed:border-[var(--color-primary)]"
         >

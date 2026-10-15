@@ -3,43 +3,58 @@ import ProductCard from "../../components/product/ProductCard.astro";
 import ContactCta from "../../components/sections/ContactCta.astro";
 import Container from "../../components/ui/Container.astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { CATEGORIES } from "../../lib/categories";
 import { getPublishedProducts } from "../../lib/products";
 import { makePageTitle } from "../../lib/seo";
 
 const products = await getPublishedProducts();
+const groups = CATEGORIES.map((category) => ({
+  ...category,
+  items: products.filter((product) => product.data.category === category.key),
+})).filter((group) => group.items.length > 0);
 ---
 
 <BaseLayout
   title={makePageTitle("产品")}
-  description="摩托车手机支架产品列表：型号、适配尺寸与材质等参数，欢迎咨询报价。"
+  description={`${products.length} 款手机支架与车载配件，分为骑行支架、桌面支架、车载支架、车载用品与笔记本支架五个类目，支持批量询价。`}
 >
   <section class="border-b border-[var(--color-line)] bg-white py-20 sm:py-28">
     <Container>
       <p class="eyebrow mb-5">产品</p>
-      <h1 class="max-w-5xl text-4xl font-black leading-[1.08] sm:text-6xl">摩托车手机支架</h1>
+      <h1 class="max-w-5xl text-4xl font-black leading-[1.08] sm:text-6xl">产品目录</h1>
       <p class="mt-7 max-w-3xl text-xl leading-9 text-[var(--color-muted)]">
-        每款产品一个独立页面，列出型号、适配尺寸、材质与夹持方式等参数。
+        共 {products.length} 款产品，分为 {groups.length} 个类目。每款都有独立页面，列出颜色、装箱数量与外箱规格；价格请咨询。
       </p>
+      <nav aria-label="产品类目" class="mt-9 flex flex-wrap gap-3">
+        {groups.map((group) => (
+          <a
+            href={`#${group.key}`}
+            class="border border-[var(--color-line)] bg-white px-5 py-3 text-sm font-bold text-[var(--color-ink)] transition hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
+          >
+            {group.label}（{group.items.length}）
+          </a>
+        ))}
+      </nav>
     </Container>
   </section>
 
-  <section class="py-24 sm:py-32">
-    <Container>
-      {products.length > 0 ? (
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {products.map((product) => <ProductCard product={product} />)}
+  {groups.map((group) => (
+    <section id={group.key} class="scroll-mt-24 border-b border-[var(--color-line)] py-20 last:border-0 sm:py-24">
+      <Container>
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p class="text-xs font-bold tracking-[0.24em] text-[var(--color-accent)]">类目</p>
+            <h2 class="mt-3 text-3xl font-black text-[var(--color-ink)] sm:text-4xl">{group.label}</h2>
+            <p class="mt-3 max-w-2xl text-base leading-8 text-[var(--color-muted)]">{group.blurb}</p>
+          </div>
+          <p class="shrink-0 text-sm font-bold text-[var(--color-muted)]">共 {group.items.length} 款</p>
         </div>
-      ) : (
-        <div class="border border-dashed border-[var(--color-line)] bg-white p-8 sm:p-12">
-          <p class="text-xs font-bold tracking-[0.2em] text-[var(--color-accent)]">待补充</p>
-          <h2 class="mt-4 text-2xl font-black text-[var(--color-ink)]">产品资料尚未提供。</h2>
-          <p class="mt-5 max-w-2xl text-base leading-8 text-[var(--color-muted)]">
-            请提供款式名称、规格参数与可公开使用的产品图片，我们会按真实资料建立产品条目，不使用演示数据。
-          </p>
+        <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {group.items.map((product) => <ProductCard product={product} />)}
         </div>
-      )}
-    </Container>
-  </section>
+      </Container>
+    </section>
+  ))}
 
   <ContactCta />
 </BaseLayout>

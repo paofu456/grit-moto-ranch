@@ -8,6 +8,10 @@ const products = defineCollection({
     slug: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
     title: z.string().min(1),
     summary: z.string().min(1),
+    // Five product families from the customer's own catalog; the collection must
+    // express one category per entry so /products/ can group them.
+    // Keep this key set in sync with src/lib/categories.ts.
+    category: z.enum(["riding", "desktop", "car", "auto-acc", "laptop"]),
     draft: z.boolean().default(false),
     featured: z.boolean().default(false),
     order: z.number().int().nonnegative().default(0),

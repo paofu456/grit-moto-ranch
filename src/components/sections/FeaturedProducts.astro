@@ -5,16 +5,16 @@ import Button from "../ui/Button.astro";
 import Container from "../ui/Container.astro";
 import SectionHeading from "../ui/SectionHeading.astro";
 
-const products = (await getPublishedProducts()).filter((product) => product.data.featured).slice(0, 3);
+const products = (await getPublishedProducts()).filter((product) => product.data.featured).slice(0, 6);
 ---
 
 <section class="border-y border-[var(--color-line)] bg-white py-24 sm:py-32">
   <Container>
     <div class="flex flex-col items-start justify-between gap-8 sm:flex-row sm:items-end">
       <SectionHeading
-        eyebrow="产品"
-        title="每款支架都有独立的说明页。"
-        description="列表页只保留关键信息，详情页展示型号、适配尺寸与材质等参数。"
+        eyebrow="主推产品"
+        title="看看我们在做的产品。"
+        description="以下为部分主推型号，完整目录共 5 个类目，均可按数量报价。"
       />
       <Button href="/products/" variant="secondary" class="shrink-0">查看全部产品</Button>
     </div>
@@ -24,18 +24,9 @@ const products = (await getPublishedProducts()).filter((product) => product.data
         {products.map((product) => <ProductCard product={product} />)}
       </div>
     ) : (
-      <div class="mt-12 border border-dashed border-[var(--color-line)] bg-[var(--color-surface)] p-8 sm:p-12">
-        <p class="text-xs font-bold tracking-[0.2em] text-[var(--color-accent)]">待补充</p>
-        <h3 class="mt-4 text-2xl font-black text-[var(--color-ink)]">产品资料尚未提供，此处暂不展示产品卡片。</h3>
-        <ul class="mt-5 max-w-2xl space-y-2 text-base leading-8 text-[var(--color-muted)]">
-          <li>· 款式与型号名称（例如不同夹持方式的产品线）</li>
-          <li>· 每款的适配手机尺寸、材质、夹持方式等规格</li>
-          <li>· 可公开使用的产品实拍图或渲染图</li>
-        </ul>
-        <p class="mt-5 max-w-2xl text-sm leading-7 text-[var(--color-muted)]">
-          资料到位后这里会替换成真实产品卡片，不使用演示数据冒充产品。
-        </p>
-      </div>
+      <p class="mt-12 border border-dashed border-[var(--color-line)] p-8 text-sm text-[var(--color-muted)]">
+        主推产品尚未选定，请先到产品目录查看全部型号。
+      </p>
     )}
   </Container>
 </section>

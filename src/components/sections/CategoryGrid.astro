@@ -1,0 +1,37 @@
+---
+import { CATEGORIES } from "../../lib/categories";
+import Container from "../ui/Container.astro";
+import SectionHeading from "../ui/SectionHeading.astro";
+---
+
+<section class="py-24 sm:py-32">
+  <Container>
+    <SectionHeading
+      eyebrow="产品分类"
+      title="五个类目，一次找齐。"
+      description="从骑行到桌面、车载与笔记本支架，每款都有独立说明页与规格参数。"
+    />
+    <div class="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {CATEGORIES.map((category, index) => (
+        <a
+          href={`/products/#${category.key}`}
+          class:list={[
+            "group flex flex-col justify-between border border-[var(--color-line)] bg-white p-7 transition hover:-translate-y-1 hover:border-[var(--color-accent)] hover:shadow-[var(--shadow-card)]",
+            index === 0 && "sm:col-span-2 lg:col-span-1",
+          ]}
+        >
+          <div>
+            <p class="text-xs font-bold tracking-[0.24em] text-[var(--color-accent)]">
+              {String(index + 1).padStart(2, "0")}
+            </p>
+            <h3 class="mt-4 text-2xl font-black text-[var(--color-ink)]">{category.label}</h3>
+            <p class="mt-3 text-sm leading-7 text-[var(--color-muted)]">{category.blurb}</p>
+          </div>
+          <span class="mt-6 text-sm font-bold text-[var(--color-ink)] group-hover:text-[var(--color-accent)]">
+            查看该类目 <span aria-hidden="true">→</span>
+          </span>
+        </a>
+      ))}
+    </div>
+  </Container>
+</section>

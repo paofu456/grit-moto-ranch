@@ -3,11 +3,20 @@ import ContactCta from "../components/sections/ContactCta.astro";
 import Container from "../components/ui/Container.astro";
 import company from "../data/company.json";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { CATEGORIES } from "../lib/categories";
+import { getPublishedProducts } from "../lib/products";
 import { makePageTitle } from "../lib/seo";
+
+const products = await getPublishedProducts();
+const counts = CATEGORIES.map((category) => ({
+  ...category,
+  count: products.filter((product) => product.data.category === category.key).length,
+}));
 
 const facts = [
   { label: "公司／品牌名称", value: company.name },
-  { label: "主营产品", value: "摩托车手机支架" },
+  { label: "产品类目", value: `${counts.length} 个（${counts.map((c) => c.label).join("、")}）` },
+  { label: "在售型号", value: `${products.length} 款` },
   { label: "所在地区", value: company.location },
   { label: "成立时间", value: company.founded },
 ].filter((item) => item.value);
@@ -15,7 +24,7 @@ const facts = [
 
 <BaseLayout
   title={makePageTitle("关于我们")}
-  description={`${company.name} 的基本信息与联系方式。`}
+  description={`${company.name} 的产品类目与联系方式。`}
 >
   <section class="border-b border-[var(--color-line)] bg-white py-20 sm:py-28">
     <Container>
@@ -38,6 +47,14 @@ const facts = [
       <p class="mt-8 max-w-3xl border-l-2 border-[var(--color-line)] pl-4 text-sm leading-7 text-[var(--color-muted)]">
         公司简介、成立时间、产地与产能等资料待你确认后补充，本页不使用未经确认的表述。
       </p>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {counts.map((category) => (
+          <a href={`/products/#${category.key}`} class="border border-[var(--color-line)] bg-white p-7 transition hover:border-[var(--color-accent)]">
+            <h2 class="text-xl font-black text-[var(--color-ink)]">{category.label}</h2>
+            <p class="mt-2 text-sm font-bold text-[var(--color-muted)]">{category.count} 款</p>
+          </a>
+        ))}
+      </div>
     </Container>
   </section>
 

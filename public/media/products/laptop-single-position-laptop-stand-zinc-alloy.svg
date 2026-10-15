@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600" role="img" aria-label="单档笔记本支架（锌合金） 产品图片待补充">
+  <rect width="800" height="600" fill="#f2f2f2"/>
+  <rect x="24" y="24" width="752" height="552" fill="none" stroke="#dcdcdc" stroke-width="2" stroke-dasharray="10 8"/>
+  <g fill="none" stroke="#d0d0d0" stroke-width="6">
+    <rect x="352" y="84" width="96" height="150" rx="16"/>
+  </g>
+  <text x="400" y="64" text-anchor="middle" font-size="22" font-weight="700" fill="#a8a8a8" letter-spacing="4">笔记本支架</text>
+  <text x="400" y="124" text-anchor="middle" font-size="20" font-weight="700" fill="#b4b4b4" letter-spacing="6">产品图片待补充</text>
+  <text x="400" y="274" text-anchor="middle" font-size="42" font-weight="700" fill="#8c8c8c">单档笔记本支架（锌</text><text x="400" y="326" text-anchor="middle" font-size="42" font-weight="700" fill="#8c8c8c">合金）</text>
+</svg>
