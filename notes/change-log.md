@@ -1,5 +1,20 @@
 # Change log
 
+## 2026-10-15（上线）
+
+- 客户授权上线：建立公开仓库 paofu456/grit-moto-ranch，使用免费 workers.dev 地址
+- 配置 Cloudflare Workers Builds（native git 集成），绑定 Worker `grit-moto-ranch`
+- 首次构建成功并校验线上内容
+- 正式上线配置：`siteMode: production`、`contentStatus: ready`、canonical 指向 workers.dev 地址、robots.txt 允许索引
+- 清理草稿说明文案（67 个产品详情页 + 品牌故事页），首页品牌理念区新增咨询电话与邮箱
+- `npm run verify:delivery` 全部通过（73 页）
+- 第二次推送触发自动构建（source=push_event）并校验更新内容，确认旧草稿文案已消失
+
+## 2026-10-15（第三轮）
+
+- 下架缺图产品「盾形笔记本支架」（draft），在售 67 款
+- 新增静态询价表单（mailto 提交，不含假成功提示）
+
 ## 2026-10-15（第二轮）
 
 - 品牌统一为 GRIT MOTO RANCH（客户选择方案 B）
