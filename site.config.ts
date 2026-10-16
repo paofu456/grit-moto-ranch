@@ -1,9 +1,9 @@
 export const siteConfig = {
   language: "zh-CN",
   locale: "zh_CN",
-  siteUrl: undefined as string | undefined,
-  siteMode: "local" as "local" | "production",
-  contentStatus: "draft" as "demo" | "draft" | "ready",
+  siteUrl: "https://grit-moto-ranch.fanfu749.workers.dev",
+  siteMode: "production" as "local" | "production",
+  contentStatus: "ready" as "demo" | "draft" | "ready",
   navigation: [
     { label: "首页", href: "/" },
     { label: "产品商城", href: "/products/" },
