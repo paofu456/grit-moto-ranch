@@ -7,8 +7,8 @@ draft: false
 featured: true
 order: 3
 images:
-  - src: /media/products/riding-decorative-helmet-accessory-kit.svg
-    alt: "头盔装饰配件套装（产品图片待补充）"
+  - src: /media/products/riding-decorative-helmet-accessory-kit.png
+    alt: "头盔装饰配件套装"
 specifications:
   - label: "英文名称"
     value: "Decorative Helmet Accessory Kit"

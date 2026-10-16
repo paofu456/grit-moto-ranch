@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 5
 images:
-  - src: /media/products/riding-phone-holder-handlebar-mount-2.svg
-    alt: "车把款手机支架（黑色，外箱 56×41.5×47.5cm）（产品图片待补充）"
+  - src: /media/products/riding-phone-holder-handlebar-mount-2.png
+    alt: "车把款手机支架（黑色，外箱 56×41.5×47.5cm）"
 specifications:
   - label: "英文名称"
     value: "Phone Holder - Handlebar Mount"

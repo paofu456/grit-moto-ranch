@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 9
 images:
-  - src: /media/products/riding-phone-holder-handlebar-mount-4.svg
-    alt: "车把款手机支架（全黑／黑白／橙白 等 6 色）（产品图片待补充）"
+  - src: /media/products/riding-phone-holder-handlebar-mount-4.png
+    alt: "车把款手机支架（全黑／黑白／橙白 等 6 色）"
 specifications:
   - label: "英文名称"
     value: "Phone Holder - Handlebar Mount"

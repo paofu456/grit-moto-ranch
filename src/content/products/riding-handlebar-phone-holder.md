@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 14
 images:
-  - src: /media/products/riding-handlebar-phone-holder.svg
-    alt: "车把手机支架（产品图片待补充）"
+  - src: /media/products/riding-handlebar-phone-holder.png
+    alt: "车把手机支架"
 specifications:
   - label: "英文名称"
     value: "Handlebar Phone Holder"

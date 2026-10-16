@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 8
 images:
-  - src: /media/products/riding-phone-holder-mirror-mount-4.svg
-    alt: "后视镜款手机支架（全黑／黑白／橙白 等 6 色）（产品图片待补充）"
+  - src: /media/products/riding-phone-holder-mirror-mount-4.png
+    alt: "后视镜款手机支架（全黑／黑白／橙白 等 6 色）"
 specifications:
   - label: "英文名称"
     value: "Phone Holder - Mirror Mount"

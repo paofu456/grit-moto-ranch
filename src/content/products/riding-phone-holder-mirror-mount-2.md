@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 4
 images:
-  - src: /media/products/riding-phone-holder-mirror-mount-2.svg
-    alt: "后视镜款手机支架（黑色，外箱 56×41.5×47.5cm）（产品图片待补充）"
+  - src: /media/products/riding-phone-holder-mirror-mount-2.png
+    alt: "后视镜款手机支架（黑色，外箱 56×41.5×47.5cm）"
 specifications:
   - label: "英文名称"
     value: "Phone Holder - Mirror Mount"

@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 10
 images:
-  - src: /media/products/riding-six-claw-phone-holder-mirror-mount.svg
-    alt: "六爪后视镜款手机支架（产品图片待补充）"
+  - src: /media/products/riding-six-claw-phone-holder-mirror-mount.png
+    alt: "六爪后视镜款手机支架"
 specifications:
   - label: "英文名称"
     value: "Six-Claw Phone Holder - Mirror Mount"
