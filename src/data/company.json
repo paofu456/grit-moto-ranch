@@ -1,6 +1,7 @@
 {
   "name": "非凡摩托车支架",
   "shortName": "非凡",
+  "brandEn": "GRIT MOTO RANCH",
   "tagline": "手机支架与车载配件",
   "description": "产品覆盖骑行支架、桌面支架、车载支架、车载用品与笔记本支架五个类目，支持批量询价与样品咨询。",
   "founded": "",
@@ -9,7 +10,9 @@
   "phone": "",
   "whatsapp": "",
   "address": "",
-  "logo": "",
+  "logo": "/media/company/logo-wordmark.png",
+  "logoOnDark": "/media/company/logo-wordmark-white.png",
+  "logoLockup": "/media/company/logo-lockup.png",
   "social": {
     "linkedin": ""
   }

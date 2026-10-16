@@ -11,7 +11,7 @@ const isActive = (href: string) => href === "/" ? path === "/" : path.startsWith
   <Container class="flex h-20 items-center justify-between gap-8">
     <a href="/" aria-label={`${company.name} 首页`} class="shrink-0">
       {company.logo
-        ? <img src={company.logo} alt={`${company.name} logo`} width="212" height="48" class="h-10 w-auto" />
+        ? <img src={company.logo} alt={`${company.brandEn} logo`} width="220" height="76" class="h-10 w-auto" />
         : <span class="block text-lg font-black leading-tight tracking-tight text-[var(--color-ink)]">{company.name}</span>}
     </a>
 
