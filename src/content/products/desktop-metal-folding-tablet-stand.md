@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 15
 images:
-  - src: /media/products/desktop-metal-folding-tablet-stand.svg
-    alt: "金属折叠平板支架（产品图片待补充）"
+  - src: /media/products/desktop-metal-folding-tablet-stand.png
+    alt: "金属折叠平板支架"
 specifications:
   - label: "英文名称"
     value: "Metal Folding Tablet Stand"

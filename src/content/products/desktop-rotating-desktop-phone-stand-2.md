@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 3
 images:
-  - src: /media/products/desktop-rotating-desktop-phone-stand-2.svg
-    alt: "旋转桌面手机支架（黑色／灰色／紫色 等 6 色，外箱 51×25×43.5cm）（产品图片待补充）"
+  - src: /media/products/desktop-rotating-desktop-phone-stand-2.png
+    alt: "旋转桌面手机支架（黑色／灰色／紫色 等 6 色，外箱 51×25×43.5cm）"
 specifications:
   - label: "英文名称"
     value: "Rotating Desktop Phone Stand"

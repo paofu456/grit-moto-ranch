@@ -1,26 +1,26 @@
 ---
-import company from "../../data/company.json";
+import { copy } from "../../data/copy";
 import Button from "../ui/Button.astro";
 import Container from "../ui/Container.astro";
+
+const { hero } = copy;
+const [before = "", after = ""] = hero.title.split(hero.highlight);
 ---
 
 <section class="relative overflow-hidden bg-[var(--color-ink)] text-white">
   <div class="pointer-events-none absolute inset-0 opacity-[0.14]" aria-hidden="true" style="background-image: repeating-linear-gradient(115deg, rgba(255,255,255,.55) 0 1px, transparent 1px 128px)"></div>
-  <Container class="relative py-24 sm:py-32 lg:py-40">
+  <Container class="relative py-24 sm:py-32 lg:py-36">
     <p class="mb-7 inline-flex items-center gap-3 text-xs font-extrabold tracking-[0.3em] text-[var(--color-accent)]">
       <span class="h-px w-10 bg-[var(--color-accent)]"></span>
-      摩托车手机支架
+      {hero.tag}
     </p>
-    <h1 class="max-w-4xl text-4xl font-black leading-[1.1] tracking-tight sm:text-6xl lg:text-7xl">
-      <span class="box-decoration-clone bg-[var(--color-accent)] px-3 py-1">{company.tagline}</span>
+    <h1 class="max-w-4xl text-4xl font-black leading-[1.12] tracking-tight sm:text-6xl lg:text-7xl">
+      {before}<span class="box-decoration-clone bg-[var(--color-accent)] px-3 py-1">{hero.highlight}</span>{after}
     </h1>
-    <p class="mt-8 max-w-2xl text-lg leading-9 text-white/70 sm:text-xl">{company.description}</p>
+    <p class="mt-8 max-w-2xl text-lg leading-9 text-white/70 sm:text-xl">{hero.lead}</p>
     <div class="mt-10 flex flex-col gap-3 sm:flex-row">
-      <Button href="/products/" variant="light">查看产品</Button>
-      <Button href="/contact/" variant="secondary" class="border-white/25 bg-white/10 text-white hover:border-white">咨询与报价</Button>
+      <Button href={hero.primary.href} variant="light">{hero.primary.label}</Button>
+      <Button href={hero.secondary.href} variant="secondary" class="border-white/25 bg-white/10 text-white hover:border-white">{hero.secondary.label}</Button>
     </div>
-    <p class="mt-10 max-w-xl border-l-2 border-white/15 pl-4 text-xs leading-6 text-white/45">
-      视觉方向样稿：配色、字重与版式已按参考网站的方向确定；标题与简介为占位文案，待你确认真实卖点后替换。
-    </p>
   </Container>
 </section>

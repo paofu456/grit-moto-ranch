@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 11
 images:
-  - src: /media/products/auto-acc-2-in-1-rotating-digit-parking-number-display.svg
-    alt: "二合一旋转数字停车号码牌（产品图片待补充）"
+  - src: /media/products/auto-acc-2-in-1-rotating-digit-parking-number-display.png
+    alt: "二合一旋转数字停车号码牌"
 specifications:
   - label: "英文名称"
     value: "2-in-1 Rotating-Digit Parking Number Display"

@@ -12,15 +12,15 @@ const { images } = Astro.props;
 const galleryId = `gallery-${Math.random().toString(36).slice(2)}`;
 ---
 
-<div id={galleryId} data-gallery>
-  <div class="overflow-hidden border border-[var(--color-line)] bg-[var(--color-surface)]">
+<div id={galleryId} data-gallery class="mx-auto w-full max-w-[420px]">
+  <div class="overflow-hidden border border-[var(--color-line)] bg-white p-4">
     <img
       data-gallery-main
       src={images[0].src}
       alt={images[0].alt}
-      width="800"
-      height="620"
-      class="aspect-[4/3] h-auto w-full object-cover"
+      width="420"
+      height="420"
+      class="mx-auto aspect-square h-auto w-full object-contain"
     />
   </div>
   {images.length > 1 && (
@@ -33,9 +33,9 @@ const galleryId = `gallery-${Math.random().toString(36).slice(2)}`;
           data-alt={image.alt}
           aria-label={`查看第 ${index + 1} 张产品图`}
           aria-pressed={index === 0 ? "true" : "false"}
-          class="overflow-hidden rounded-xl border-2 border-transparent aria-pressed:border-[var(--color-primary)]"
+          class="overflow-hidden rounded-xl border-2 border-transparent bg-white p-2 aria-pressed:border-[var(--color-accent)]"
         >
-          <img src={image.src} alt="" aria-hidden="true" width="180" height="140" class="aspect-[4/3] h-auto w-full object-cover" />
+          <img src={image.src} alt="" aria-hidden="true" width="180" height="180" class="aspect-square h-auto w-full object-contain" />
         </button>
       ))}
     </div>

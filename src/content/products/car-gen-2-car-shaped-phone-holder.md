@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 12
 images:
-  - src: /media/products/car-gen-2-car-shaped-phone-holder.svg
-    alt: "第二代车型手机支架（产品图片待补充）"
+  - src: /media/products/car-gen-2-car-shaped-phone-holder.png
+    alt: "第二代车型手机支架"
 specifications:
   - label: "英文名称"
     value: "Gen 2 Car-Shaped Phone Holder"

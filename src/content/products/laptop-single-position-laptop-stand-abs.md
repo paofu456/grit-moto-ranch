@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 6
 images:
-  - src: /media/products/laptop-single-position-laptop-stand-abs.svg
-    alt: "单档笔记本支架（ABS）（产品图片待补充）"
+  - src: /media/products/laptop-single-position-laptop-stand-abs.png
+    alt: "单档笔记本支架（ABS）"
 specifications:
   - label: "英文名称"
     value: "Single-Position Laptop Stand - ABS"

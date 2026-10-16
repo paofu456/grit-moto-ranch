@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 16
 images:
-  - src: /media/products/desktop-wrist-mounted-phone-holder.svg
-    alt: "腕带式手机支架（产品图片待补充）"
+  - src: /media/products/desktop-wrist-mounted-phone-holder.png
+    alt: "腕带式手机支架"
 specifications:
   - label: "英文名称"
     value: "Wrist-Mounted Phone Holder"

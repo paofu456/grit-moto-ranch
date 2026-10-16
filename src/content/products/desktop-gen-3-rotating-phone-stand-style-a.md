@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 10
 images:
-  - src: /media/products/desktop-gen-3-rotating-phone-stand-style-a.svg
-    alt: "三代旋转手机支架（款式 A）（产品图片待补充）"
+  - src: /media/products/desktop-gen-3-rotating-phone-stand-style-a.png
+    alt: "三代旋转手机支架（款式 A）"
 specifications:
   - label: "英文名称"
     value: "Gen 3 Rotating Phone Stand - Style A"

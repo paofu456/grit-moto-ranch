@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 11
 images:
-  - src: /media/products/laptop-iron-laptop-stand-18-inch-version.svg
-    alt: "铁质笔记本支架（18 英寸版）（产品图片待补充）"
+  - src: /media/products/laptop-iron-laptop-stand-18-inch-version.png
+    alt: "铁质笔记本支架（18 英寸版）"
 specifications:
   - label: "英文名称"
     value: "Iron Laptop Stand - 18-inch Version"

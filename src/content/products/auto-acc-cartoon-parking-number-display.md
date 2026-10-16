@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 4
 images:
-  - src: /media/products/auto-acc-cartoon-parking-number-display.svg
-    alt: "卡通停车号码牌（产品图片待补充）"
+  - src: /media/products/auto-acc-cartoon-parking-number-display.png
+    alt: "卡通停车号码牌"
 specifications:
   - label: "英文名称"
     value: "Cartoon Parking Number Display"

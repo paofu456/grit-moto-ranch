@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 7
 images:
-  - src: /media/products/auto-acc-wood-look-parking-number-display.svg
-    alt: "木纹停车号码牌（产品图片待补充）"
+  - src: /media/products/auto-acc-wood-look-parking-number-display.png
+    alt: "木纹停车号码牌"
 specifications:
   - label: "英文名称"
     value: "Wood-Look Parking Number Display"

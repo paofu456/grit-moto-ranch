@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 12
 images:
-  - src: /media/products/auto-acc-push-to-open-parking-number-display.svg
-    alt: "按压弹出式停车号码牌（产品图片待补充）"
+  - src: /media/products/auto-acc-push-to-open-parking-number-display.png
+    alt: "按压弹出式停车号码牌"
 specifications:
   - label: "英文名称"
     value: "Push-to-Open Parking Number Display"

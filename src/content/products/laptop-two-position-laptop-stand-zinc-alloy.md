@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 2
 images:
-  - src: /media/products/laptop-two-position-laptop-stand-zinc-alloy.svg
-    alt: "双档笔记本支架（锌合金）（产品图片待补充）"
+  - src: /media/products/laptop-two-position-laptop-stand-zinc-alloy.jpg
+    alt: "双档笔记本支架（锌合金）"
 specifications:
   - label: "英文名称"
     value: "Two-Position Laptop Stand - Zinc Alloy"

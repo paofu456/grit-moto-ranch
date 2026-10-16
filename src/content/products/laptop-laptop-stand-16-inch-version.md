@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 8
 images:
-  - src: /media/products/laptop-laptop-stand-16-inch-version.svg
-    alt: "笔记本支架（16 英寸版）（产品图片待补充）"
+  - src: /media/products/laptop-laptop-stand-16-inch-version.png
+    alt: "笔记本支架（16 英寸版）"
 specifications:
   - label: "英文名称"
     value: "Laptop Stand - 16-inch Version"

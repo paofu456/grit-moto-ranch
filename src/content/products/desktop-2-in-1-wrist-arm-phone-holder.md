@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 18
 images:
-  - src: /media/products/desktop-2-in-1-wrist-arm-phone-holder.svg
-    alt: "腕带／臂带二合一手机支架（产品图片待补充）"
+  - src: /media/products/desktop-2-in-1-wrist-arm-phone-holder.png
+    alt: "腕带／臂带二合一手机支架"
 specifications:
   - label: "英文名称"
     value: "2-in-1 Wrist / Arm Phone Holder"

@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 17
 images:
-  - src: /media/products/desktop-arm-mounted-phone-holder.svg
-    alt: "臂带式手机支架（产品图片待补充）"
+  - src: /media/products/desktop-arm-mounted-phone-holder.png
+    alt: "臂带式手机支架"
 specifications:
   - label: "英文名称"
     value: "Arm-Mounted Phone Holder"

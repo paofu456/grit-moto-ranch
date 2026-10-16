@@ -1,0 +1,85 @@
+---
+import Container from "../components/ui/Container.astro";
+import company from "../data/company.json";
+import { helpContent } from "../data/copy";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { makePageTitle } from "../lib/seo";
+
+const phoneHref = company.phone.replace(/\s/g, "");
+---
+
+<BaseLayout
+  title={makePageTitle("帮助中心")}
+  description={`${company.name} 帮助中心：选购指引、询价流程、装箱信息与联系方式。`}
+>
+  <section class="border-b border-[var(--color-line)] bg-white py-20 sm:py-28">
+    <Container>
+      <p class="eyebrow mb-5">帮助中心</p>
+      <h1 class="max-w-4xl text-4xl font-black leading-[1.1] sm:text-6xl">选购、询价与联系我们</h1>
+      <p class="mt-7 max-w-3xl text-xl leading-9 text-[var(--color-muted)]">
+        按下面三步就能拿到报价。需要人工协助时，直接打电话或发邮件给我们。
+      </p>
+    </Container>
+  </section>
+
+  <section class="py-20 sm:py-24">
+    <Container class="grid gap-6 lg:grid-cols-2">
+      {company.phone && (
+        <a href={`tel:${phoneHref}`} class="border border-[var(--color-line)] bg-white p-8 transition hover:-translate-y-1 hover:shadow-[var(--shadow-card)]">
+          <p class="eyebrow">电话</p>
+          <h2 class="mt-4 text-2xl font-black">直接电话咨询</h2>
+          <p class="mt-3 text-lg font-bold text-[var(--color-ink)]">{company.phone}</p>
+        </a>
+      )}
+      {company.email && (
+        <a href={`mailto:${company.email}`} class="border border-[var(--color-line)] bg-white p-8 transition hover:-translate-y-1 hover:shadow-[var(--shadow-card)]">
+          <p class="eyebrow">邮箱</p>
+          <h2 class="mt-4 text-2xl font-black">发邮件给我们</h2>
+          <p class="mt-3 break-all text-lg font-bold text-[var(--color-ink)]">{company.email}</p>
+        </a>
+      )}
+    </Container>
+  </section>
+
+  <section class="border-y border-[var(--color-line)] bg-white py-20 sm:py-24">
+    <Container>
+      <p class="text-xs font-bold tracking-[0.24em] text-[var(--color-accent)]">询价流程</p>
+      <h2 class="mt-4 text-3xl font-black text-[var(--color-ink)] sm:text-4xl">三步拿到报价</h2>
+      <ol class="mt-10 grid gap-px bg-[var(--color-line)] sm:grid-cols-3">
+        {helpContent.quoteSteps.map((step, index) => (
+          <li class="bg-white px-0 py-8 sm:px-8">
+            <p class="text-sm font-black text-[var(--color-accent)]">{String(index + 1).padStart(2, "0")}</p>
+            <h3 class="mt-4 text-xl font-black text-[var(--color-ink)]">{step.title}</h3>
+            <p class="mt-3 text-base leading-8 text-[var(--color-muted)]">{step.text}</p>
+          </li>
+        ))}
+      </ol>
+    </Container>
+  </section>
+
+  <section class="py-20 sm:py-24">
+    <Container>
+      <p class="text-xs font-bold tracking-[0.24em] text-[var(--color-accent)]">选购指引</p>
+      <h2 class="mt-4 text-3xl font-black text-[var(--color-ink)] sm:text-4xl">不知道选哪款？按使用位置找</h2>
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {helpContent.buyingGuide.map((item) => (
+          <a href={item.href} class="border border-[var(--color-line)] bg-white p-7 transition hover:border-[var(--color-accent)]">
+            <h3 class="text-lg font-black text-[var(--color-ink)]">{item.title}</h3>
+            <p class="mt-3 text-sm leading-7 text-[var(--color-muted)]">{item.text}</p>
+          </a>
+        ))}
+      </div>
+    </Container>
+  </section>
+
+  <section class="border-t border-[var(--color-line)] bg-white py-20 sm:py-24">
+    <Container>
+      <p class="text-xs font-bold tracking-[0.24em] text-[var(--color-accent)]">包装与装箱</p>
+      <h2 class="mt-4 text-3xl font-black text-[var(--color-ink)] sm:text-4xl">装箱数量与外箱信息</h2>
+      <div class="mt-8 max-w-3xl space-y-4 text-base leading-8 text-[var(--color-muted)]">
+        <p>每个产品详情页的「规格参数」中都列出了该款的装箱数量、外箱尺寸与整箱毛重，方便你估算运费与仓储。</p>
+        <p>批量采购时如需拼箱或指定包装方式，请在询价时说明，我们按实际出货情况确认。</p>
+      </div>
+    </Container>
+  </section>
+</BaseLayout>

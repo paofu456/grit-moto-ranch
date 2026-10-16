@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 13
 images:
-  - src: /media/products/desktop-waterproof-phone-case.svg
-    alt: "防水手机壳（产品图片待补充）"
+  - src: /media/products/desktop-waterproof-phone-case.png
+    alt: "防水手机壳"
 specifications:
   - label: "英文名称"
     value: "Waterproof Phone Case"

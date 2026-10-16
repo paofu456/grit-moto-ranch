@@ -7,8 +7,8 @@ draft: false
 featured: true
 order: 5
 images:
-  - src: /media/products/auto-acc-parking-number-display.svg
-    alt: "停车号码牌（产品图片待补充）"
+  - src: /media/products/auto-acc-parking-number-display.png
+    alt: "停车号码牌"
 specifications:
   - label: "英文名称"
     value: "Parking Number Display"

@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 4
 images:
-  - src: /media/products/laptop-three-position-laptop-stand-zinc-alloy.svg
-    alt: "三档笔记本支架（锌合金）（产品图片待补充）"
+  - src: /media/products/laptop-three-position-laptop-stand-zinc-alloy.png
+    alt: "三档笔记本支架（锌合金）"
 specifications:
   - label: "英文名称"
     value: "Three-Position Laptop Stand - Zinc Alloy"

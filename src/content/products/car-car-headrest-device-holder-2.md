@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 2
 images:
-  - src: /media/products/car-car-headrest-device-holder-2.svg
-    alt: "车载头枕支架（黑色／红色，外箱 67×36.5×41.5cm，款式 B）（产品图片待补充）"
+  - src: /media/products/car-car-headrest-device-holder-2.png
+    alt: "车载头枕支架（黑色／红色，外箱 67×36.5×41.5cm，款式 B）"
 specifications:
   - label: "英文名称"
     value: "Car Headrest Device Holder"

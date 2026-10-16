@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 3
 images:
-  - src: /media/products/laptop-two-position-zinc-alloy-laptop-stand-color-box.svg
-    alt: "双档锌合金笔记本支架（彩盒装）（产品图片待补充）"
+  - src: /media/products/laptop-two-position-zinc-alloy-laptop-stand-color-box.png
+    alt: "双档锌合金笔记本支架（彩盒装）"
 specifications:
   - label: "英文名称"
     value: "Two-Position Zinc Alloy Laptop Stand - Color Box"

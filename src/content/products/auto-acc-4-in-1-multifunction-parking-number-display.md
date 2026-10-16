@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 10
 images:
-  - src: /media/products/auto-acc-4-in-1-multifunction-parking-number-display.svg
-    alt: "四合一多功能停车号码牌（产品图片待补充）"
+  - src: /media/products/auto-acc-4-in-1-multifunction-parking-number-display.png
+    alt: "四合一多功能停车号码牌"
 specifications:
   - label: "英文名称"
     value: "4-in-1 Multifunction Parking Number Display"

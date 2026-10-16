@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 10
 images:
-  - src: /media/products/car-truck-phone-holder.svg
-    alt: "卡车手机支架（产品图片待补充）"
+  - src: /media/products/car-truck-phone-holder.png
+    alt: "卡车手机支架"
 specifications:
   - label: "英文名称"
     value: "Truck Phone Holder"

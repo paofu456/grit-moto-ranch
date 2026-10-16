@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 2
 images:
-  - src: /media/products/auto-acc-anti-slip-dashboard-mat-with-parking-number-display-2.svg
-    alt: "防滑仪表台垫（带停车号码牌）（灰黑／灰银／灰金 等 6 色）（产品图片待补充）"
+  - src: /media/products/auto-acc-anti-slip-dashboard-mat-with-parking-number-display-2.png
+    alt: "防滑仪表台垫（带停车号码牌）（灰黑／灰银／灰金 等 6 色）"
 specifications:
   - label: "英文名称"
     value: "Anti-Slip Dashboard Mat with Parking Number Display"

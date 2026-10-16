@@ -20,10 +20,13 @@ const groups = CATEGORIES.map((category) => ({
 >
   <section class="border-b border-[var(--color-line)] bg-white py-20 sm:py-28">
     <Container>
-      <p class="eyebrow mb-5">产品</p>
-      <h1 class="max-w-5xl text-4xl font-black leading-[1.08] sm:text-6xl">产品目录</h1>
+      <p class="eyebrow mb-5">产品商城</p>
+      <h1 class="max-w-5xl text-4xl font-black leading-[1.08] sm:text-6xl">产品商城</h1>
       <p class="mt-7 max-w-3xl text-xl leading-9 text-[var(--color-muted)]">
         共 {products.length} 款产品，分为 {groups.length} 个类目。每款都有独立页面，列出颜色、装箱数量与外箱规格；价格请咨询。
+      </p>
+      <p class="mt-5 max-w-3xl border-l-2 border-[var(--color-accent)] pl-4 text-sm leading-7 text-[var(--color-muted)]">
+        本站为产品展示与询价，暂不支持在线下单。选好型号后通过电话或邮箱联系我们获取报价。
       </p>
       <nav aria-label="产品类目" class="mt-9 flex flex-wrap gap-3">
         {groups.map((group) => (

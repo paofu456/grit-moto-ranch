@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 5
 images:
-  - src: /media/products/desktop-tri-fold-phone-stand-eva-silicone-options.svg
-    alt: "三折手机支架（EVA／硅胶可选）（产品图片待补充）"
+  - src: /media/products/desktop-tri-fold-phone-stand-eva-silicone-options.png
+    alt: "三折手机支架（EVA／硅胶可选）"
 specifications:
   - label: "英文名称"
     value: "Tri-Fold Phone Stand - EVA / Silicone Options"

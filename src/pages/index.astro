@@ -1,9 +1,10 @@
 ---
 import CategoryGrid from "../components/sections/CategoryGrid.astro";
-import CompanyIntro from "../components/sections/CompanyIntro.astro";
+import BrandIdea from "../components/sections/BrandIdea.astro";
 import ContactCta from "../components/sections/ContactCta.astro";
 import FeaturedProducts from "../components/sections/FeaturedProducts.astro";
 import Hero from "../components/sections/Hero.astro";
+import SellingPoints from "../components/sections/SellingPoints.astro";
 import company from "../data/company.json";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { makePageTitle } from "../lib/seo";
@@ -11,11 +12,12 @@ import { makePageTitle } from "../lib/seo";
 
 <BaseLayout
   title={makePageTitle()}
-  description={`${company.name}：骑行、车载、桌面与笔记本手机支架共 5 个类目，支持批量询价。`}
+  description={`${company.name}：专业摩托车手机支架与车载配件，产品覆盖骑行、车载、桌面与笔记本五个类目，支持批量询价。`}
 >
   <Hero />
+  <SellingPoints />
   <CategoryGrid />
-  <CompanyIntro />
   <FeaturedProducts />
+  <BrandIdea />
   <ContactCta />
 </BaseLayout>

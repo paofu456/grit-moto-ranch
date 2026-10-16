@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 7
 images:
-  - src: /media/products/car-air-vent-phone-holder-short-hook.svg
-    alt: "出风口手机支架（短钩）（产品图片待补充）"
+  - src: /media/products/car-air-vent-phone-holder-short-hook.png
+    alt: "出风口手机支架（短钩）"
 specifications:
   - label: "英文名称"
     value: "Air Vent Phone Holder - Short Hook"

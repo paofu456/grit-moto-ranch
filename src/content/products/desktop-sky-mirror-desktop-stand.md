@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 12
 images:
-  - src: /media/products/desktop-sky-mirror-desktop-stand.svg
-    alt: "天镜桌面支架（产品图片待补充）"
+  - src: /media/products/desktop-sky-mirror-desktop-stand.png
+    alt: "天镜桌面支架"
 specifications:
   - label: "英文名称"
     value: "Sky Mirror Desktop Stand"

@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 6
 images:
-  - src: /media/products/car-clear-view-car-sun-visor.svg
-    alt: "透明遮阳板（产品图片待补充）"
+  - src: /media/products/car-clear-view-car-sun-visor.png
+    alt: "透明遮阳板"
 specifications:
   - label: "英文名称"
     value: "Clear-View Car Sun Visor"

@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 7
 images:
-  - src: /media/products/laptop-two-position-laptop-stand-abs.svg
-    alt: "双档笔记本支架（ABS）（产品图片待补充）"
+  - src: /media/products/laptop-two-position-laptop-stand-abs.png
+    alt: "双档笔记本支架（ABS）"
 specifications:
   - label: "英文名称"
     value: "Two-Position Laptop Stand - ABS"

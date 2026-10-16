@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 3
 images:
-  - src: /media/products/car-car-phone-holder.svg
-    alt: "车载手机支架（黑色，外箱 57×46.5×14，款式 A）（产品图片待补充）"
+  - src: /media/products/car-car-phone-holder.png
+    alt: "车载手机支架（黑色，外箱 57×46.5×14，款式 A）"
 specifications:
   - label: "英文名称"
     value: "Car Phone Holder"

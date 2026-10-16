@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 7
 images:
-  - src: /media/products/desktop-desktop-phone-stand-e-commerce-version.svg
-    alt: "桌面手机支架（电商版）（产品图片待补充）"
+  - src: /media/products/desktop-desktop-phone-stand-e-commerce-version.png
+    alt: "桌面手机支架（电商版）"
 specifications:
   - label: "英文名称"
     value: "Desktop Phone Stand - E-commerce Version"

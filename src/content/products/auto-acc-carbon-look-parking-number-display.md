@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 6
 images:
-  - src: /media/products/auto-acc-carbon-look-parking-number-display.svg
-    alt: "碳纤维纹停车号码牌（产品图片待补充）"
+  - src: /media/products/auto-acc-carbon-look-parking-number-display.png
+    alt: "碳纤维纹停车号码牌"
 specifications:
   - label: "英文名称"
     value: "Carbon-Look Parking Number Display"

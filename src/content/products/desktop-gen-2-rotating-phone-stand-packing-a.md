@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 8
 images:
-  - src: /media/products/desktop-gen-2-rotating-phone-stand-packing-a.svg
-    alt: "二代旋转手机支架（包装 A）（产品图片待补充）"
+  - src: /media/products/desktop-gen-2-rotating-phone-stand-packing-a.png
+    alt: "二代旋转手机支架（包装 A）"
 specifications:
   - label: "英文名称"
     value: "Gen 2 Rotating Phone Stand - Packing A"

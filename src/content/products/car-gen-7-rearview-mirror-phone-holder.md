@@ -7,8 +7,8 @@ draft: false
 featured: true
 order: 9
 images:
-  - src: /media/products/car-gen-7-rearview-mirror-phone-holder.svg
-    alt: "第七代后视镜手机支架（产品图片待补充）"
+  - src: /media/products/car-gen-7-rearview-mirror-phone-holder.png
+    alt: "第七代后视镜手机支架"
 specifications:
   - label: "英文名称"
     value: "Gen 7 Rearview-Mirror Phone Holder"

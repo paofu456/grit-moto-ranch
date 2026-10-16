@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 11
 images:
-  - src: /media/products/car-gen-1-rear-seat-phone-holder.svg
-    alt: "第一代后排手机支架（产品图片待补充）"
+  - src: /media/products/car-gen-1-rear-seat-phone-holder.png
+    alt: "第一代后排手机支架"
 specifications:
   - label: "英文名称"
     value: "Gen 1 Rear-Seat Phone Holder"

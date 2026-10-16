@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 4
 images:
-  - src: /media/products/desktop-foldable-travel-phone-stand.svg
-    alt: "折叠便携手机支架（黑色／银色／灰色）（产品图片待补充）"
+  - src: /media/products/desktop-foldable-travel-phone-stand.png
+    alt: "折叠便携手机支架（黑色／银色／灰色）"
 specifications:
   - label: "英文名称"
     value: "Foldable Travel Phone Stand"

@@ -6,8 +6,8 @@ export const siteConfig = {
   contentStatus: "draft" as "demo" | "draft" | "ready",
   navigation: [
     { label: "首页", href: "/" },
-    { label: "产品", href: "/products/" },
-    { label: "关于我们", href: "/about/" },
-    { label: "联系我们", href: "/contact/" },
+    { label: "产品商城", href: "/products/" },
+    { label: "品牌故事", href: "/about/" },
+    { label: "帮助中心", href: "/help/" },
   ],
 };

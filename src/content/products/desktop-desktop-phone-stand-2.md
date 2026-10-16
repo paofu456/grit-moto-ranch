@@ -7,8 +7,8 @@ draft: false
 featured: false
 order: 6
 images:
-  - src: /media/products/desktop-desktop-phone-stand-2.svg
-    alt: "桌面手机支架（黑色／白色）（产品图片待补充）"
+  - src: /media/products/desktop-desktop-phone-stand-2.png
+    alt: "桌面手机支架（黑色／白色）"
 specifications:
   - label: "英文名称"
     value: "Desktop Phone Stand"
