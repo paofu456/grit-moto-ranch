@@ -1,0 +1,104 @@
+---
+import company from "../../data/company.json";
+import Container from "../ui/Container.astro";
+
+const phoneHref = company.phone.replace(/\s/g, "");
+---
+
+<section class="border-y border-[var(--color-line)] bg-white py-20 sm:py-24">
+  <Container class="grid gap-12 lg:grid-cols-[1.1fr_.9fr] lg:gap-20">
+    <div>
+      <p class="text-xs font-bold tracking-[0.24em] text-[var(--color-accent)]">在线询价</p>
+      <h2 class="mt-4 text-3xl font-black text-[var(--color-ink)] sm:text-4xl">填写需求，我们按数量报价</h2>
+      <p class="mt-5 max-w-2xl text-base leading-8 text-[var(--color-muted)]">
+        留下联系方式和需要的产品，我们会尽快回复型号、颜色与批量报价。
+      </p>
+
+      <form id="inquiry-form" class="mt-10 grid gap-5" data-email={company.email} novalidate={false}>
+        <div>
+          <label for="inq-name" class="block text-sm font-bold text-[var(--color-ink)]">姓名或称呼 <span class="text-[var(--color-accent)]">*</span></label>
+          <input id="inq-name" name="name" type="text" required autocomplete="name"
+            class="mt-2 w-full border border-[var(--color-line)] bg-white px-4 py-3 text-base text-[var(--color-ink)] outline-none focus:border-[var(--color-ink)]" />
+        </div>
+        <div>
+          <label for="inq-contact" class="block text-sm font-bold text-[var(--color-ink)]">电话或微信 <span class="text-[var(--color-accent)]">*</span></label>
+          <input id="inq-contact" name="contact" type="text" required autocomplete="tel"
+            class="mt-2 w-full border border-[var(--color-line)] bg-white px-4 py-3 text-base text-[var(--color-ink)] outline-none focus:border-[var(--color-ink)]" />
+        </div>
+        <div>
+          <label for="inq-product" class="block text-sm font-bold text-[var(--color-ink)]">需要的产品与数量</label>
+          <input id="inq-product" name="product" type="text"
+            class="mt-2 w-full border border-[var(--color-line)] bg-white px-4 py-3 text-base text-[var(--color-ink)] outline-none focus:border-[var(--color-ink)]" />
+        </div>
+        <div>
+          <label for="inq-message" class="block text-sm font-bold text-[var(--color-ink)]">备注</label>
+          <textarea id="inq-message" name="message" rows="4"
+            class="mt-2 w-full border border-[var(--color-line)] bg-white px-4 py-3 text-base text-[var(--color-ink)] outline-none focus:border-[var(--color-ink)]"></textarea>
+        </div>
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+          <button type="submit" class="inline-flex min-h-12 items-center justify-center rounded-full bg-[var(--color-ink)] px-7 py-3 text-sm font-bold text-white transition-colors hover:bg-[var(--color-accent)]">
+            提交询价
+          </button>
+          {company.phone && (
+            <a href={`tel:${phoneHref}`} class="inline-flex min-h-12 items-center justify-center rounded-full border border-[var(--color-line)] px-7 py-3 text-sm font-bold text-[var(--color-ink)] transition-colors hover:border-[var(--color-ink)]">
+              直接打电话 {company.phone}
+            </a>
+          )}
+        </div>
+        <p id="inq-status" role="status" aria-live="polite" class="text-sm leading-7 text-[var(--color-muted)]"></p>
+      </form>
+    </div>
+
+    <div class="border border-[var(--color-line)] bg-[var(--color-surface)] p-8">
+      <h3 class="text-lg font-black text-[var(--color-ink)]">这个表单怎么工作</h3>
+      <ul class="mt-5 space-y-4 text-sm leading-7 text-[var(--color-muted)]">
+        <li><strong class="text-[var(--color-ink)]">不经过网站服务器。</strong>网站是静态页面，没有后台，也不保存你填写的内容。</li>
+        <li><strong class="text-[var(--color-ink)]">提交后会打开你的邮件客户端</strong>，内容已自动填好，由你确认发送给 {company.email}。</li>
+        <li><strong class="text-[var(--color-ink)]">想更快？</strong>直接拨打电话，或复制邮箱自行发送。</li>
+      </ul>
+      <div class="mt-8 space-y-3 border-t border-[var(--color-line)] pt-8 text-sm">
+        {company.phone && (
+          <p class="flex flex-wrap items-center gap-2">
+            <span class="font-bold text-[var(--color-ink)]">电话</span>
+            <a href={`tel:${phoneHref}`} class="break-all text-[var(--color-muted)] hover:text-[var(--color-accent)]">{company.phone}</a>
+          </p>
+        )}
+        <p class="flex flex-wrap items-center gap-2">
+          <span class="font-bold text-[var(--color-ink)]">邮箱</span>
+          <a href={`mailto:${company.email}`} class="break-all text-[var(--color-muted)] hover:text-[var(--color-accent)]">{company.email}</a>
+        </p>
+      </div>
+    </div>
+  </Container>
+</section>
+
+<script>
+  const form = document.querySelector<HTMLFormElement>("#inquiry-form");
+  const status = document.querySelector<HTMLElement>("#inq-status");
+
+  form?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const email = form.dataset.email ?? "";
+    const data = new FormData(form);
+    const value = (key: string) => String(data.get(key) ?? "").trim();
+
+    if (!value("name") || !value("contact")) {
+      form.reportValidity();
+      if (status) status.textContent = "请先填写姓名和联系方式。";
+      return;
+    }
+
+    const lines = [
+      `姓名：${value("name")}`,
+      `电话/微信：${value("contact")}`,
+      `需要的产品与数量：${value("product") || "（未填写）"}`,
+      `备注：${value("message") || "（未填写）"}`,
+    ];
+    const subject = `产品询价 - ${value("name")}`;
+    const mailto = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
+    window.location.href = mailto;
+    if (status) {
+      status.textContent = `已为你打开邮件客户端，请在里面点击发送。如果没反应，请直接拨打页面上的电话或把邮箱内容复制发给我们（${email}）。`;
+    }
+  });
+</script>

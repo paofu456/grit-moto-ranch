@@ -3,7 +3,7 @@ slug: laptop-shield-style-laptop-stand
 title: "盾形笔记本支架"
 summary: "笔记本支架｜盾形笔记本支架。可选颜色：银色。装箱 200 支/箱。"
 category: laptop
-draft: false
+draft: true
 featured: false
 order: 5
 images:
